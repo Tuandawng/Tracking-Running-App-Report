@@ -1,0 +1,55 @@
+\section{\bfseries Methodology}
+\Large
+The methodology section outlines the steps taken throughout the development process of the Running Tracker App, including requirements gathering, functional decomposition, iterative development, and testing. The systematic approach helped in creating a user-centered, modular, and scalable app.
+
+\subsection{Requirements Gathering}
+The project began by identifying and documenting user requirements in the form of structured use cases. Each use case detailed specific functionalities, actors involved, and the flow of operations. The primary actor, the User, interacts with the system to manage running activities, training plans, goals, profile, statistics, and settings. A use case diagram was created to capture these interactions comprehensively.
+
+\subsection{Functional Decomposition}
+The functionality of the Running Tracker App was divided into well-defined modules based on the use cases:
+
+\begin{itemize}
+    \item \textbf{Manage Run Session}: Allows users to start, pause, resume, stop, and view session information or results.
+    \item \textbf{Manage Run History}: Enables users to view, filter, add to favorites, remove, or delete runs.
+    \item \textbf{Manage Training Plans}: Users can view, start, track, and cancel training plans.
+    \item \textbf{Manage Personal Goals}: Users can create, view, edit, and delete running goals.
+    \item \textbf{Manage Profile}: Users can view and edit profile details.
+    \item \textbf{View Statistics}: Allows users to filter performance stats by week, month, or year.
+    \item \textbf{Change Settings}: Enables users to adjust language, themes, and units of measurement.
+    \item \textbf{Get Notifications}: Sends notifications for milestones, reminders, start-run alerts, and errors.
+\end{itemize}
+
+A use case diagram was created to ensure that all user requirements were addressed, and the notification module was incorporated as an extension to enhance modularity.
+
+
+\subsection{Iterative Development}
+An iterative development approach was adopted to implement the app’s features in phases. Kotlin’s robust features, including Coroutines for asynchronous programming and Jetpack libraries for efficient architecture, enabled rapid prototyping. The notifications module was designed as an extension, ensuring flexibility and event-driven delivery of alerts such as milestones and reminders.
+
+\subsection{Technology and Tools}
+The following tools and technologies were utilized:
+\begin{itemize}
+    \item \textbf{Programming Language}: Kotlin for its modern, efficient syntax and compatibility with Android.
+    \item \textbf{Development Environment}: Android Studio integrated with Gradle for build management.
+    \item \textbf{Core Libraries}: Jetpack components (Navigation, LiveData, ViewModel) to maintain a clean and scalable architecture.
+    \item \textbf{Asynchronous Tasks}: Coroutines to handle long-running tasks like GPS tracking and data updates.
+    \item \textbf{Notifications}: Implemented using Android Notification APIs for delivering alerts.
+    \item \textbf{Testing}: JUnit and Espresso for unit testing and UI automation.
+\end{itemize}
+
+
+\subsection{Testing Methodology}
+Testing was carried out in multiple phases to ensure functionality:
+
+\begin{itemize}
+    \item \textbf{Unit Testing}: Focused on individual methods such as starting and stopping sessions.
+    \item \textbf{Integration Testing}: Tested combined modules, including notifications and run history.
+    \item \textbf{System Testing}: Validated end-to-end functionality, including extended notifications.
+    \item \textbf{User Acceptance Testing (UAT)}: Ensured the app met user expectations through real-world scenarios.
+\end{itemize}
+
+\subsection{Design Considerations}
+The system was designed with a focus on modularity, scalability, and user experience. Each functional module was aligned with the use cases to ensure a clear separation of concerns. Notifications were implemented as modular extensions to ensure easy scalability. The UI follows Material Design principles for an intuitive user experience, and performance optimizations were implemented to handle long-duration GPS tracking efficiently.
+
+\subsection{Continuous Improvement}
+An agile, use-case-driven approach allowed for continuous refinement based on user feedback. As new requirements emerged (e.g., extended notifications), they were seamlessly integrated into the existing architecture.
+

@@ -1,0 +1,50 @@
+\section{\bfseries System Architecture}
+\Large
+The system architecture section explains the technical design of the app, structured using the MVVM (Model-View-ViewModel) pattern, which ensures maintainability, testability, and modularity.
+
+\subsection{Model}
+The app utilizes the MVVM architecture, which is advantageous due to its:
+\begin{itemize}
+    \item \textbf{Maintainability}: Easy to update and version the app.
+    \item \textbf{Extensibility}: Easy to refactor or add new functionality without significantly altering the codebase.
+    \item \textbf{Testability}: Facilitates writing unit tests for each layer.
+    \item \textbf{Transparent Communication}: The ViewModel connects the View and Model layers instead of having a direct connection.
+\end{itemize}
+
+\subsection{System Architecture Layers}
+
+\subsubsection{View Layer}
+\textbf{Components}: UI components, such as Views, Activities, and Fragments, which interact with the ViewModel to observe data changes and update the user interface.
+
+\textbf{Responsibilities}:
+\begin{itemize}
+    \item Display tracking data, including running time, location, distance, and steps.
+    \item Respond to user inputs like start, pause, resume, and stop actions.
+    \item Continuously update data displayed on the screen in real time.
+\end{itemize}
+
+\subsubsection{ViewModel Layer}
+\textbf{Components}: ViewModel classes, LiveData, and StateFlow.
+
+\textbf{Responsibilities}:
+\begin{itemize}
+    \item Connect the View layer with the Model layer, ensuring consistent and up-to-date data for the UI.
+    \item Manage and update data from the Model layer.
+    \item Handle user inputs and update the UI state (e.g., when a run is started, paused, or resumed).
+\end{itemize}
+
+\subsubsection{Model Layer}
+
+\textbf{Components}: Repositories and local data sources.
+
+\textbf{Responsibilities}:
+\begin{itemize}
+    \item Gather and manage data from local sources.
+    \item \textbf{Local Storage}: Store and retrieve user information, such as run statistics, user profiles, and activity data.
+    \item \textbf{Data Transformation}: Process raw data (e.g., GPS coordinates) and transform it into usable information (e.g., calculate distance).
+\end{itemize}
+
+\subsection{Diagram}
+A diagram illustrating the MVVM architecture, showing the flow of data between the View, ViewModel, and Model layers.
+
+

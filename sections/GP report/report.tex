@@ -1,0 +1,50 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage[utf8]{vietnam}
+\usepackage[english]{babel}
+\usepackage{lmodern} 
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+    {\LARGE UNIVERSITY OF SCIENCE AND TECHNOLOGY OF HANOI \\[5pt]}
+    \includegraphics[height=8cm]{intro/usth_logo.png} \\[10pt]
+    {\Huge \textbf{GROUP PROJECT REPORT} \\[30pt]}
+    {\huge Title: \\[5pt]}
+    {\huge \textbf{Tracking Running App} \\[30pt]}
+    {\large \textbf{Supervisors:} \\ Dr. Doan Nhat Quang \\[30pt]}
+    {\large \textbf{Lab name:} \\ USTH ICT Lab \\[30pt]}
+    \date{}
+    \newpage
+    \begin{table}[h!]
+    \centering 
+    \huge \textbf{Group Members}\\[100pt]
+    \begin{tabular}{|l|c|}
+    \hline
+    \textbf{Name}                & \textbf{Student ID} \\ \hline
+    Đào Thái Sơn                 & 22BI13392           \\ \hline
+    Võ Hồng Quang                & 22BI13386           \\ \hline
+    Trần Thọ Thăng               & 22BI13404           \\ \hline
+    Ngô Quý Đăng Tuấn           & 22BI13446           \\ \hline
+    Nguyễn Đức Tâm               & 22BI13400           \\ \hline
+    Vũ Thế Khôi Nguyên          & 22BI13344           \\ \hline
+    \end{tabular}
+    \label{tab:group_members}
+    \end{table}
+\end{center}
+\newpage
+\tableofcontents
+\newpage
+\include{intro/intro}  
+\newpage
+\include{methodology/methodology}
+\include{system_architecture/system_architecture}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{system_architecture/system_architecture.png}
+    \caption{MVVM Architecture Diagram}
+\end{figure}
+
+\end{document}
